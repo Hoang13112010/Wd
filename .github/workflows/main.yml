@@ -25,7 +25,7 @@ jobs:
 
       - name: Create RDP User HOANG
         run: |
-          $securePass = ConvertTo-SecureString "HOANG13112010" -AsPlainText -Force
+          $securePass = ConvertTo-SecureString "Hoang13112010@" -AsPlainText -Force
           New-LocalUser -Name "HOANG" -Password $securePass -AccountNeverExpires
           Add-LocalGroupMember -Group "Administrators" -Member "HOANG"
           Add-LocalGroupMember -Group "Remote Desktop Users" -Member "HOANG"
@@ -79,7 +79,7 @@ jobs:
           Write-Host "`n=== RDP ACCESS ==="
           Write-Host "Address: $env:TAILSCALE_IP"
           Write-Host "Username: HOANG"
-          Write-Host "Password: HOANG13112010"
+          Write-Host "Password: Hoang13112010@"
           Write-Host "==================`n"
           
           while ($true) {
